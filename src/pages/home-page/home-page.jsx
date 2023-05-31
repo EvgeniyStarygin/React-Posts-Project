@@ -42,7 +42,3 @@ export const HomePage = () => {
     </>
   )
 };
-
-HomePage.propTypes = {
-  //text: PropTypes.string.isRequired
-}

@@ -18,7 +18,7 @@ root.render(
           <Route path="/" element={<Layout />}>
             <Route index={true} element={<Navigate to="/home" />} />
             <Route path="/home" element={<HomePage />} />
-            <Route path="/about-me" element={<UserInfoPage />} />
+            <Route path="/about-me" element={<AboutMePage />} />
             <Route path="/user/:id" element={<UserInfoPage />} />
           </Route>
         </Routes>

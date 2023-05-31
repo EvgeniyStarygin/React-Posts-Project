@@ -7,7 +7,6 @@ function* commentsWorker({ payload }) {
     yield delay(500);
     try {
         const response = yield loadComments(payload);
-        console.log(response);
         if (response.status === 200) {
             const comments = yield response.data;
             yield put(getCommentsSuccess(comments));
@@ -17,7 +16,6 @@ function* commentsWorker({ payload }) {
             yield put(getCommentsFailure(error));
         }
     } catch (err) {
-        console.log(err);
         yield put(getCommentsFailure(err.code));
     }
 }
