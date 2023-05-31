@@ -1,0 +1,12 @@
+.load__page {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(54, 54, 54, 0.3);
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
