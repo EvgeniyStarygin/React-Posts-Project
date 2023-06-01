@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://evgeniystarygin.github.io/react-posts-project/",
+  "homepage": "https://evgeniystarygin.github.io/React-Posts-Project/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
