@@ -3,14 +3,14 @@ import styles from './comment.module.scss';
 import PropTypes from 'prop-types';
 
 
-export const Comment = ({ comment }) => (
-    <div className={styles.comment}>
-        <p>{comment.body}</p>
-        <span className={styles.comment__author}>{comment.email}</span>
-    </div>
-)
-
-
+export const Comment = ({ comment }) => {
+    return (
+        <div className={styles.comment}>
+            <p>{comment.body}</p>
+            <span className={styles.comment__author}>{comment.email}</span>
+        </div>
+    )
+}
 
 Comment.propTypes = {
     comment: PropTypes.shape({

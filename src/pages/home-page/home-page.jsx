@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
 import styles from './home-page.module.scss';
-import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPostsFetch } from '../../redux/slices/posts-slice';
 import { POSTS } from '../../constants/selectors';
-import { Post } from '../../components/post/post';
 import { LoadPage } from '../load-page/load-page';
+import { Post } from '../../components/post/post';
 
 export const HomePage = () => {
 
@@ -14,7 +13,7 @@ export const HomePage = () => {
 
   useEffect(() => {
     dispatch(getPostsFetch());
-  }, [dispatch])
+  }, [])
 
   return (
     <>

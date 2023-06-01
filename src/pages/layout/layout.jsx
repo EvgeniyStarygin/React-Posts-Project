@@ -5,7 +5,7 @@ import { Menu } from '../../components/menu';
 export const Layout = () => {
   return (
     <>
-      <Menu />
+      <Menu/>
       <main className={styles.main__content}>
         <Outlet />
       </main>

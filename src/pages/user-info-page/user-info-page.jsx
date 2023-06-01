@@ -4,17 +4,17 @@ import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { USER } from '../../constants/selectors';
 import { getUserInfoFetch, getUserPostsFetch } from '../../redux/slices/user-slice';
-import { Post } from '../../components/post/post';
 import { LoadPage } from '../load-page/load-page';
 import { UserInfo } from '../../components/user-info/user-info';
 import { BackBtn } from '../../components/back-btn';
+import { Post } from '../../components/post/post';
 
 
 export const UserInfoPage = () => {
 
     const { id } = useParams();
     const dispatch = useDispatch();
-    const user = useSelector(USER) || null;
+    const user = useSelector(USER);
     const userInfo = user.info;
     const userPosts = user.posts;
 

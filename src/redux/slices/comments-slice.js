@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    data: null,
+    data: [],
     isLoading: false,
     error: null,
 }
@@ -11,23 +11,24 @@ export const commentsSlice = createSlice({
     initialState,
     reducers: {
         getCommentsFetch: (state, action) => {
-            state.data = null;
-            state.error = null;
             state.isLoading = true;
         },
         getCommentsSuccess: (state, action) => {
-            state.data = action.payload;
+            const comments = action.payload;
+            comments.forEach((comment) => state.data.push(comment))
             state.error = null;
             state.isLoading = false;
         },
         getCommentsFailure: (state, action) => {
-            state.data = null;
             state.error = action.payload;
             state.isLoading = false;
+        },
+        deleteComments: (state, action) => {
+            state.data = state.data.filter((comment) => comment.postId !== action.payload)
         },
     }
 });
 
-export const { getCommentsFetch, getCommentsSuccess, getCommentsFailure } = commentsSlice.actions;
+export const { getCommentsFetch, getCommentsSuccess, getCommentsFailure, deleteComments } = commentsSlice.actions;
 
 export const commentsReducer = commentsSlice.reducer;
